@@ -1,0 +1,317 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Libertinus Mono", monospace;
+  background-color: #ffffff;
+}
+
+/*NAVBAR*/
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*HERO BANNER*/
+#hero {
+  background: url('../images/cafe9.jpg') center/cover no-repeat;
+  height: 100vh;
+  padding-top: 80px;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeInDown 1.5s ease;
+}
+.hero-subtitle {
+  font-size: 1.3rem;
+  animation: fadeInUp 2s ease;
+}
+/*HERO CARD*/
+.hero-content {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  display: inline-block;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*ÖNE ÇIKANLAR*/
+#oneCikanlar .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#oneCikanlar .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/*REZERVASYON*/
+.rezervasyontext {
+  color: #3a7089;
+}
+
+.rezervasyonbtn {
+  background-color: #3a7089;
+  color: #ffffff;
+}
+
+.rezervasyonbtn:hover {
+  background-color: #1f404f;
+  color: #ffffff;
+}
+
+.rezervasyonSayfa {
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.reservation-left {
+  height: 100%;
+  background-image: url("../images/cafe8.jpg") center/cover no-repeat;
+}
+
+.modal-content {
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+#modal-spinner {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: block;
+}
+
+#modal-check {
+  font-size: 60px;
+  color: #28a745;
+  display: none;
+  animation: pop 0.4s ease-in-out;
+}
+
+#modal-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 15px;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+
+/*MENÜ KARTLARI*/
+.menu-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card img {
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#menuContainer {
+  padding-bottom: 80px;
+}
+
+/*ADMIN*/
+.admin-panel {
+  max-width: 1100px;
+  margin: 120px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3a7089;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-add-form {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.admin-add-form input {
+  border-radius: 6px;
+}
+
+.admin-add-form button {
+  background-color: #3a7089;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.admin-add-form button:hover {
+  background-color: #1f404f;
+}
+
+/*KART TASARIMI*/
+.reservation-card {
+  background-color: #fff;
+  padding: 15px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reservation-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reservation-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.admin-btn {
+  margin-top: 8px;
+  background-color: #3a7089;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admin-btn:hover {
+  background-color: #1f404f;
+}
+
+/*ANASAYFA HERO*/
+.hero {
+  background-image: url("../images/cafe9.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hero-content button {
+  background-color: #3a7089;
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero-content button:hover {
+  background-color: #5e241b;
+}
+
+/*HAKKIMIZDA HERO*/
+#about-hero {
+  background: url('../images/manzara3.jpg') center/cover no-repeat;
+  height: 60vh;
+  padding-top: 80px;
+}
+.about-hero-content {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.about-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/*YÖNETİCİ GİRİŞ FORMU*/
+#admin-login {
+  height: 100vh;
+  padding-top: 80px;
+}
+.login-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ FOOTER */
+#site-footer {
+  background-color: #222222;
+  color: #eee;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+#site-footer p {
+  margin: 5px 0;
+}
+
+.map-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+

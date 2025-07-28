@@ -5,7 +5,7 @@ const path = require("path");
 const router = express.Router();
 const filePath = path.join(__dirname, "../data/reservations.json");
 
-// ✅ Rezervasyonları getir
+
 router.get("/", (req, res) => {
   try {
     if (!fs.existsSync(filePath)) {
@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
   }
 });
 
-// ✅ Yeni rezervasyon ekle
+
 router.post("/", (req, res) => {
   try {
     if (!fs.existsSync(filePath)) {
