@@ -5,7 +5,6 @@ const path = require("path");
 const router = express.Router();
 const filePath = path.join(__dirname, "../data/reservations.json");
 
-
 router.get("/", (req, res) => {
   try {
     if (!fs.existsSync(filePath)) {
@@ -18,7 +17,6 @@ router.get("/", (req, res) => {
     res.status(500).json({ success: false, message: "Rezervasyonlar okunamadı" });
   }
 });
-
 
 router.post("/", (req, res) => {
   try {
@@ -53,6 +51,25 @@ router.post("/", (req, res) => {
   }
 });
 
+router.delete("/:id", (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    const reservations = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+
+    const index = reservations.findIndex(r => r.id === id);
+    if (index === -1) {
+      return res.status(404).json({ success: false, message: "Rezervasyon bulunamadı" });
+    }
+
+    reservations.splice(index, 1);
+    fs.writeFileSync(filePath, JSON.stringify(reservations, null, 2), "utf-8");
+
+    console.log(`🗑️ Rezervasyon silindi: ${id}`);
+    res.json({ success: true, message: "Rezervasyon silindi" });
+  } catch (err) {
+    console.error("❌ Rezervasyon silinirken hata:", err);
+    res.status(500).json({ success: false, message: "Silme işlemi sırasında hata oluştu" });
+  }
+});
+
 module.exports = router;
-
-

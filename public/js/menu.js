@@ -1,13 +1,15 @@
 const menuContainer = document.getElementById("menuContainer");
+const BASE_URL = "https://cafe-del-mar-backend.onrender.com";
 
 async function getMenu(category = "") {
-  let url = "/api/menu";
+  let url = `${BASE_URL}/api/menu`;
   if (category) url += `/kategori/${category}`;
 
   const res = await fetch(url);
   const data = await res.json();
   renderMenu(data);
 }
+
 
 function renderMenu(items) {
   menuContainer.innerHTML = "";

@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ✅ Menü Ürünlerini Yükle
   async function menuYukle() {
+    const BASE_URL = "https://cafe-del-mar-backend.onrender.com";
     const productsDiv = document.getElementById("products");
     try {
-      const res = await fetch("/api/menu");
+      const res = await fetch(`${BASE_URL}/api/menu`);
       const data = await res.json();
 
-      productsDiv.innerHTML = ""; // Tekrar yüklenirse temiz olsun
+      productsDiv.innerHTML = ""; 
       data.forEach(item => {
         const wrapper = document.createElement("div");
         wrapper.className = "form-check";
@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   menuYukle();
 
-  // ✅ Rezervasyon Formu Gönderme
   document.getElementById("reservationForm").addEventListener("submit", async function (e) {
     e.preventDefault();
 
@@ -41,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let isValid = true;
 
-    // 📅 Tarih kontrolü
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const selectedDate = new Date(date);
@@ -52,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("dateWarning").classList.add("d-none");
     }
 
-    // ⏰ Saat kontrolü
     const hour = parseInt(time.split(":")[0]);
     if (hour < 10 || hour > 22) {
       document.getElementById("timeWarning").classList.remove("d-none");
@@ -63,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!isValid) return;
 
-    // ✅ Modal
     const modal = new bootstrap.Modal(document.getElementById("reservationModal"));
     const modalSpinner = document.getElementById("modal-spinner");
     const modalCheck = document.getElementById("modal-check");
@@ -75,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.show();
 
     try {
-      const response = await fetch("/api/reservations", {
+      const response = await fetch(`${BASE_URL}/api/reservations`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const BASE_URL = "https://cafe-del-mar-backend.onrender.com";
   const rezervasyonKartlari = document.getElementById("rezervasyonKartlari");
   const menuKartlari = document.getElementById("menuKartlari");
   const yeniUrunForm = document.getElementById("yeniUrunForm");
@@ -6,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function rezervasyonlariYukle() {
     rezervasyonKartlari.innerHTML = "";
     try {
-      const res = await fetch("/api/reservations");
+      const res = await fetch(`${BASE_URL}/api/reservations`);
       const data = await res.json();
 
       data.forEach(r => {
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("click", async () => {
           const id = btn.getAttribute("data-id");
           if (confirm("Bu rezervasyonu silmek istediğinize emin misiniz?")) {
-            await fetch(`/api/reservations/${id}`, { method: "DELETE" });
+            await fetch(`${BASE_URL}/api/reservations/${id}`, { method: "DELETE" });
             rezervasyonlariYukle();
           }
         });
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function menuYukle() {
     menuKartlari.innerHTML = "";
     try {
-      const res = await fetch("/api/menu");
+      const res = await fetch(`${BASE_URL}/api/menu`);
       const data = await res.json();
 
       data.forEach(m => {
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("click", async () => {
           const id = btn.getAttribute("data-id");
           if (confirm("Bu ürünü silmek istediğinize emin misiniz?")) {
-            await fetch(`/api/menu/${id}`, { method: "DELETE" });
+            await fetch(`${BASE_URL}/api/menu/${id}`, { method: "DELETE" });
             menuYukle();
           }
         });
@@ -87,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      await fetch("/api/menu", {
+      await fetch(`${BASE_URL}/api/menu`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(yeniUrun)

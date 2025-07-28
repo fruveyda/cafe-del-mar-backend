@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const BASE_URL = "https://cafe-del-mar-backend.onrender.com";
   const loginBtn = document.getElementById("loginBtn");
   const message = document.getElementById("loginMessage");
 
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const response = await fetch("/api/login", {
+      const response = await fetch(`${BASE_URL}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password })
