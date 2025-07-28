@@ -1,0 +1,283 @@
+[
+    {
+      "id": 1,
+      "name": "Cappuccino",
+      "category": "İçecek",
+      "price": 45,
+      "image":"images/cappuccino.png"
+    },
+    {
+      "id": 2,
+      "name": "Espresso",
+      "category": "İçecek",
+      "price": 40,
+      "image":"images/espresso.png"
+    },
+    {
+      "id": 3,
+      "name": "Latte",
+      "category": "İçecek",
+      "price": 47,
+      "image":"images/latte.png"
+    },
+    {
+      "id": 4,
+      "name": "Mocha",
+      "category": "İçecek",
+      "price": 50,
+      "image":"images/mocha.png"
+    },
+    {
+      "id": 5,
+      "name": "Türk Kahvesi",
+      "category": "İçecek",
+      "price": 35,
+      "image":"images/turkkahvesi.png"
+    },
+    {
+      "id": 6,
+      "name": "Çay",
+      "category": "İçecek",
+      "price": 20,
+      "image":"images/cay.png"
+    },
+    {
+      "id": 7,
+      "name": "Soğuk Latte",
+      "category": "İçecek",
+      "price": 48,
+      "image":"images/icelatte.png"
+    },
+    {
+      "id": 8,
+      "name": "Limonata",
+      "category": "İçecek",
+      "price": 25,
+      "image":"images/limonata.png"
+    },
+    {
+      "id": 9,
+      "name": "Frappe",
+      "category": "İçecek",
+      "price": 52,
+      "image":"images/frappe.png"
+    },
+    {
+      "id": 10,
+      "name": "Sıcak Çikolata",
+      "category": "İçecek",
+      "price": 42,
+      "image":"images/sicakcikolata.png"
+    },
+    {
+      "id": 11,
+      "name": "Tiramisu",
+      "category": "Tatlı",
+      "price": 55,
+      "image":"images/tiramisu.png"
+    },
+    {
+      "id": 12,
+      "name": "Cheesecake",
+      "category": "Tatlı",
+      "price": 60,
+      "image":"images/cheesecake.png"
+    },
+    {
+      "id": 13,
+      "name": "Profiterol",
+      "category": "Tatlı",
+      "price": 45,
+      "image":"images/profiterol.png"
+    },
+    {
+      "id": 14,
+      "name": "Sufle",
+      "category": "Tatlı",
+      "price": 50,
+      "image":"images/sufle.png"
+    },
+    {
+      "id": 15,
+      "name": "Magnolia",
+      "category": "Tatlı",
+      "price": 48,
+      "image":"images/magnolia.png"
+    },
+    {
+      "id": 16,
+      "name": "Brownie",
+      "category": "Tatlı",
+      "price": 52,
+      "image":"images/brownie.png"
+    },
+    {
+      "id": 17,
+      "name": "Baklava",
+      "category": "Tatlı",
+      "price": 40,
+      "image":"images/baklava.png"
+    },
+    {
+      "id": 18,
+      "name": "Mozaik Pasta",
+      "category": "Tatlı",
+      "price": 47,
+      "image":"images/mozaik.png"
+    },
+    {
+      "id": 19,
+      "name": "Dondurma (3 Top)",
+      "category": "Tatlı",
+      "price": 38,
+      "image":"images/dondurma.png"
+    },
+    {
+      "id": 20,
+      "name": "Cupcake",
+      "category": "Tatlı",
+      "price": 35,
+      "image":"images/cupcake.png"
+    },
+    {
+      "id": 21,
+      "name": "Kremalı Makarna",
+      "category": "Ana Yemek",
+      "price": 70,
+      "image":"images/kremalimakarna.png"
+    },
+    {
+      "id": 22,
+      "name": "Tavuk Izgara",
+      "category": "Ana Yemek",
+      "price": 85,
+      "image":"images/tavukizgara.png"
+    },
+    {
+      "id": 23,
+      "name": "Köfte Tabağı",
+      "category": "Ana Yemek",
+      "price": 80,
+      "image":"images/koftetabagi.png"
+    },
+    {
+      "id": 24,
+      "name": "Somon Izgara",
+      "category": "Ana Yemek",
+      "price": 110,
+      "image":"images/somonizgara.png"
+    },
+    {
+      "id": 25,
+      "name": "Et Sote",
+      "category": "Ana Yemek",
+      "price": 95,
+      "image":"images/etsote.png"
+    },
+    {
+      "id": 26,
+      "name": "Sebzeli Noodle",
+      "category": "Ana Yemek",
+      "price": 75,
+      "image":"images/noodle.png"
+    },
+    {
+      "id": 27,
+      "name": "Fırın Makarna",
+      "category": "Ana Yemek",
+      "price": 72,
+      "image":"images/firinmakarna.png"
+    },
+    {
+      "id": 28,
+      "name": "Tavuklu Sezar Salata",
+      "category": "Ana Yemek",
+      "price": 68,
+      "image":"images/salatasezar.png"
+    },
+    {
+      "id": 29,
+      "name": "Izgara Köfte Burger",
+      "category": "Ana Yemek",
+      "price": 90,
+      "image":"images/kofteburger.png"
+    },
+    {
+      "id": 30,
+      "name": "Mantı",
+      "category": "Ana Yemek",
+      "price": 78,
+      "image":"images/manti.png"
+    },
+    {
+      "id": 31,
+      "name": "Patates Kızartması",
+      "category": "Atıştırmalık",
+      "price": 35,
+      "image":"images/patateskizartmasi.png"
+    },
+    {
+      "id": 32,
+      "name": "Soğan Halkası",
+      "category": "Atıştırmalık",
+      "price": 38,
+      "image":"images/soganhalkasi.png"
+    },
+    {
+      "id": 33,
+      "name": "Sigara Böreği",
+      "category": "Atıştırmalık",
+      "price": 42,
+      "image":"images/sigaraboregi.png"
+    },
+    {
+      "id": 34,
+      "name": "Çıtır Tavuk",
+      "category": "Atıştırmalık",
+      "price": 48,
+      "image":"images/citirtavuk.png"
+    },
+    {
+      "id": 35,
+      "name": "Mozarella Stick",
+      "category": "Atıştırmalık",
+      "price": 50,
+      "image":"images/mozarellastick.png"
+    },
+    {
+      "id": 36,
+      "name": "Mini Sandviç",
+      "category": "Atıştırmalık",
+      "price": 40,
+      "image":"images/minisandvic.png"
+    },
+    {
+      "id": 37,
+      "name": "Kumpir",
+      "category": "Atıştırmalık",
+      "price": 55,
+      "image":"images/kumpir.png"
+    },
+    {
+      "id": 38,
+      "name": "Mini Pizza",
+      "category": "Atıştırmalık",
+      "price": 58,
+      "image":"images/minipizza.png"
+    },
+    {
+      "id": 39,
+      "name": "Peynir Tabağı",
+      "category": "Atıştırmalık",
+      "price": 50,
+      "image":"images/peynirtabagi.png"
+    },
+    {
+      "id": 40,
+      "name": "Zeytinli Kraker",
+      "category": "Atıştırmalık",
+      "price": 30,
+      "image":"images/krakerzeytin.png"
+    }
+  ]
+  
