@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const BASE_URL = "https://cafe-del-mar-backend.onrender.com";
   async function menuYukle() {
-    const BASE_URL = "https://cafe-del-mar-backend.onrender.com";
     const productsDiv = document.getElementById("products");
     try {
       const res = await fetch(`${BASE_URL}/api/menu`);
