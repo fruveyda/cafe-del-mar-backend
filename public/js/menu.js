@@ -10,7 +10,6 @@ async function getMenu(category = "") {
   renderMenu(data);
 }
 
-
 function renderMenu(items) {
   menuContainer.innerHTML = "";
 

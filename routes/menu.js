@@ -69,5 +69,22 @@ router.delete("/:id", (req, res) => {
   });
 });
 
+//Kategoriye göre menü filtreleme
+router.get("/kategori/:kategori", (req, res) => {
+  const kategori = req.params.kategori;
+  
+  fs.readFile(dataPath, "utf8", (err, data) => {
+    if (err) {
+      console.error("Menü okuma hatası:", err);
+      return res.status(500).json({ success: false, message: "Sunucu hatası!" });
+    }
+
+    const menu = JSON.parse(data);
+    const filtreliMenu = menu.filter(item => item.category === kategori);
+
+    res.json(filtreliMenu);
+  });
+});
+
 module.exports = router;
 

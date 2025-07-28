@@ -53,10 +53,10 @@ router.post("/", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   try {
-    const id = parseInt(req.params.id);
+    const id = req.params.id;
     const reservations = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 
-    const index = reservations.findIndex(r => r.id === id);
+    const index = reservations.findIndex(r => String(r.id) === String(id));
     if (index === -1) {
       return res.status(404).json({ success: false, message: "Rezervasyon bulunamadı" });
     }
